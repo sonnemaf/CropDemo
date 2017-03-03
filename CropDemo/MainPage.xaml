@@ -1,0 +1,25 @@
+﻿<Page x:Class="CropDemo.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CropDemo"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="483*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Open File &amp; Crop"
+                    Margin="4"
+                    Click="ButtonOpen_Click" />
+            <Button Content="Select Image &amp; Crop"
+                    Margin="4"
+                    Click="ButtonSelect_Click" />
+        </StackPanel>
+        <Image x:Name="croppedImage"
+               Grid.Row="1" />
+    </Grid>
+</Page>
